@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./components/header/";
+import MovieList from "./components/movieList/";
+import FilterControls from "./components/filterControls/";
 
 class App extends Component {
   render() {
+    const sample = {
+      name: 'Jaws',
+      genre: 'Thriller',
+      picture: {thumbnail: './jaws-thumb.jpg'}
+    }
+
+    const movies = [sample, sample, sample, sample, sample, sample, sample, sample];
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <div className="jumbotron">
+          <Header noMovies={8} />
+          <FilterControls />
+          <MovieList movies={movies} />
+        </div>
     );
   }
 }
