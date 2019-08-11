@@ -5,7 +5,7 @@ import './movieList.css';
 export default class MovieList extends Component {
     render() {
         const movieCards = this.props.movies.map(c => (
-            <Movie key={c.name} movie={c} />
+            <Movie key={c.title} movie={c} />
         ));
         return (
             <div className="container-fluid movies bg-info">

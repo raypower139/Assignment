@@ -2,16 +2,23 @@ import React, { Component } from "react";
 import Header from "./components/header/";
 import MovieList from "./components/movieList/";
 import FilterControls from "./components/filterControls/";
+import request from "superagent";
+import api from "./dataStore/stubAPI";
 
 class App extends Component {
+  componentDidMount() {
+    request.get("https://api.themoviedb.org/3/trending/all/day?api_key=efe6d9acf80c9ced12357e99a6a39124").end((error, res) => {
+      if (res) {
+        let { results: movies } = JSON.parse(res.text);
+        api.initialize(movies);
+        this.setState({});
+      } else {
+        console.log(error);
+      }
+    });
+  }
   render() {
-    const sample = {
-      name: 'Jaws',
-      genre: 'Thriller',
-      picture: {thumbnail: './jaws-thumb.jpg'}
-    }
-
-    const movies = [sample, sample, sample, sample, sample, sample, sample, sample];
+    let movies = api.getAll();
 
     return (
         <div className="jumbotron">
