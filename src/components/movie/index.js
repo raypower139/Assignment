@@ -18,7 +18,7 @@ class Movie extends Component {
             overview: this.props.movie.overview
         }
     };
-// EDIT, SAVE & CANCEL
+// EDIT, DELETE ,SAVE & CANCEL
     handleEdit = () => this.setState({ status: "edit" });
 
     handleCancel = () => {
@@ -41,6 +41,12 @@ class Movie extends Component {
     handleTitleChange = e => this.setState({ title: e.target.value });
     handleOverviewChange = e => this.setState({ overview: e.target.value });
 
+    handleDelete = () =>  this.setState({ status : 'del'} );
+    handleConfirm = (e) => {
+        e.preventDefault();
+        this.props.deleteHandler(this.state.id);
+    };
+
 
 // RENDER
     render() {
@@ -53,7 +59,13 @@ class Movie extends Component {
             activeButtons = buttons.edit;
             leftButtonHandler = this.handleSave;
             rightButtonHandler = this.handleCancel;
+        }else if (this.state.status === 'del' ) {
+            cardColor = "bg-warning";
+            activeButtons = buttons.delete;
+            leftButtonHandler = this.handleCancel;
+            rightButtonHandler = this.handleConfirm;
         }
+
 
         return (
             <div className="col-sm-3">
@@ -64,9 +76,7 @@ class Movie extends Component {
                         src= {baseURL + this.props.movie.poster_path}
                     />
                     <div className="card-body">
-                        <h5 className="card-title ">
-                            {this.props.movie.title}
-                        </h5>
+
                         {this.state.status === "edit" ? (
                             <Fragment>
                                 <p>
@@ -88,12 +98,10 @@ class Movie extends Component {
                             </Fragment>
                         ) : (
                             <Fragment>
-                                <p>
-                                    <FontAwesomeIcon icon={["fas", "phone"]} />
+                                <h5>
                                     <span> {this.state.title} </span>
-                                </p>
+                                </h5>
                                 <p>
-                                    <FontAwesomeIcon icon={["fas", "phone"]} />
                                     <span> {this.state.overview} </span>
                                 </p>
                             </Fragment>

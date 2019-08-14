@@ -5,9 +5,11 @@ import Header from '../src/components/header/'
 import FilterControls from '../src/components/filterControls/'
 import Movie from '../src/components/movie/'
 import MovieList from '../src/components/movieList/'
+import { action } from '@storybook/addon-actions';
+
 
 storiesOf("Movie List App/Header", module).add("default", () => (
-    <Header noMovies={10} />
+    <FilterControls onUserInput={action('Search criteria changes') }/>
 ));
 
 storiesOf("Movie List App/Filter Controls", module).add("default", () => (
@@ -21,7 +23,7 @@ const sample = {
 }
 
 storiesOf("Movie List App/Movie", module).add("default", () => (
-    <Movie movie={sample}/>
+    <Movie movie={sample} deleteHandler={action('Delete Confirmed')}/>
 ));
 
 storiesOf("Movie List App/Movie List", module).add("default", () => {

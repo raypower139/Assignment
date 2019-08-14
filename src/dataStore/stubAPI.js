@@ -29,10 +29,10 @@ class StubAPI {
         return this.movies;
     }
 
-    update(key, overview) {
+    update(key, overview, title) {
         let index = _.findIndex(this.movies, movie => movie.id === key);
         if (index !== -1) {
-
+            this.movies[index].title = title;
             this.movies[index].overview = overview;
             return true;
         }
