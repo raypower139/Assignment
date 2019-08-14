@@ -8,7 +8,7 @@ class StubAPI {
     find(id) {
         let index = _.findIndex(
             this.movies,
-            movie => `${movie.title}` === id
+            movie => `${movie.id}` === id
         );
         if (index !== -1) {
             return this.movies[index];
@@ -17,7 +17,7 @@ class StubAPI {
     }
 
     delete(k) {
-        let elements = _.remove(this.movies, movie => movie.title === k);
+        let elements = _.remove(this.movies, movie => movie.id === k);
         return elements;
     }
 
@@ -29,11 +29,11 @@ class StubAPI {
         return this.movies;
     }
 
-    update(key, genre, year) {
-        let index = _.findIndex(this.movies, movie => movie.title === key);
+    update(key, overview) {
+        let index = _.findIndex(this.movies, movie => movie.id === key);
         if (index !== -1) {
-            this.movies[index].genre = genre;
-            this.movies[index].year = year;
+
+            this.movies[index].overview = overview;
             return true;
         }
         return false;

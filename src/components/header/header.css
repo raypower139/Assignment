@@ -1,0 +1,12 @@
+font {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.header{
+    background-color: #000;
+    display: block;
+    color: #fff;
+    font-size: 100px;
+    padding-top: -60px
+}
