@@ -4,6 +4,8 @@ import "../../fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import buttons from "../../config/buttonsConfig";
 import api from '../../dataStore/stubAPI'
+import { Link } from "react-router-dom";
+
 
 const baseURL = 'https://image.tmdb.org/t/p/original';
 
@@ -70,11 +72,13 @@ class Movie extends Component {
         return (
             <div className="col-sm-3">
                 <div className={`card  ${cardColor}`}>
+                    <Link to={`/movies/${this.props.movie.id}`}>
                     <img
                         className="card-img-tag center"
                         alt={this.props.movie.title}
                         src= {baseURL + this.props.movie.poster_path}
                     />
+                    </Link>
                     <div className="card-body">
 
                         {this.state.status === "edit" ? (
