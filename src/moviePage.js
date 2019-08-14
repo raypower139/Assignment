@@ -1,13 +1,23 @@
 import React, {Fragment} from "react";
 import { withRouter } from "react-router-dom";
+import api from "./dataStore/stubAPI";
+import FullMovie from "./components/fullMoviePage/";
 
 const MoviePage = props => {
+    const {id} = props.match.params;
+    const movie = api.find(id);
     return (
         <Fragment>
-            <h3> Movie id: {props.match.params.id} </h3>
-            <h3> Detail page stub </h3>
+            {movie ? (
+                <Fragment>
+                    <FullMovie movie={movie}/>
+                </Fragment>
+            ) : (
+                <p>Waiting for Movie details</p>
+            )}
         </Fragment>
     );
 };
+
 
 export default withRouter(MoviePage);
