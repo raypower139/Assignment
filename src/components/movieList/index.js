@@ -8,7 +8,7 @@ export default class MovieList extends Component {
             <Movie key={c.id} movie={c} deleteHandler={this.props.deleteHandler} />
         ));
         return (
-            <div className="container-fluid movies bg-info">
+            <div className="container-fluid movies bg-info card-title">
                 <div className="row">{movieCards}</div>
             </div>
         );

@@ -7,6 +7,7 @@ import api from '../../dataStore/stubAPI'
 import { Link } from "react-router-dom";
 
 
+
 const baseURL = 'https://image.tmdb.org/t/p/original';
 
 class Movie extends Component {
@@ -46,7 +47,7 @@ class Movie extends Component {
     handleDelete = () =>  this.setState({ status : 'del'} );
     handleConfirm = (e) => {
         e.preventDefault();
-        this.props.deleteHandler(this.state.id);
+        this.props.deleteHandler(this.props.movie.id);
     };
 
 
@@ -71,7 +72,7 @@ class Movie extends Component {
 
         return (
             <div className="col-sm-3">
-                <div className={`card  ${cardColor}`}>
+                <div className="card">
                     <Link to={`/movies/${this.props.movie.id}`}>
                     <img
                         className="card-img-tag center"
@@ -80,17 +81,18 @@ class Movie extends Component {
                     />
                     </Link>
                     <div className="card-body">
-
+                        <h5 className="card-title ">
                         {this.state.status === "edit" ? (
                             <Fragment>
-                                <p>
+                                <div className="card-title">
+
                                     <input
                                         type="text"
-                                        className="form-control"
+                                        className="form-control card-title card"
                                         value={this.state.title}
                                         onChange={this.handleTitleChange}
                                     />
-                                </p>
+                                </div>
                                 <p>
                                     <input
                                         type="text"
@@ -102,14 +104,16 @@ class Movie extends Component {
                             </Fragment>
                         ) : (
                             <Fragment>
-                                <h5>
+                                <h5 classname="card-title title">
+                                    <FontAwesomeIcon icon={["fas", "film"]} />
                                     <span> {this.state.title} </span>
                                 </h5>
                                 <p>
                                     <span> {this.state.overview} </span>
                                 </p>
+
                             </Fragment>
-                        )}
+                        )}</h5>
                     </div>
 
 
