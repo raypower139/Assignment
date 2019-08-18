@@ -57,3 +57,9 @@ storiesOf("Movie List App/Movie List", module)
     return <MovieList movies={samples}/>
 });
 
+storiesOf("Movie List App/Movie Page/MoviePrivate", module)
+    .add("default", () => (
+        <MoviePrivateDetails user={sample}/>
+    ));
+
+

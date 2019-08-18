@@ -27,7 +27,11 @@ export default class FilterControls extends Component {
                             <select id="original_language" onChange={this.handleGenreChange}>
                                 <option value="all">All</option>
                                 <option value="en">English</option>
+                                <option value="ko">Korean</option>
+                                <option value="id">Indonesian</option>
+                                <option value="ja">Japan</option>
                                 <option value="es">Spanish</option>
+                                <option value="in">Indian</option>
 
                             </select>
                         </h4>

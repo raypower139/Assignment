@@ -31,8 +31,10 @@ export default ({ movie }) => {
                 <div className="col-4">
                     <FullMovie movie={movie} />
                 </div>
-                <div className="col-5 bg-secondary text-light">
-                    <span>Map placeholder</span>
+                <div className="col-4">
+                    <img width={"600px"}
+                        src= {baseURL + movie.backdrop_path}
+                    />
                 </div>
             </div>
         </Fragment>

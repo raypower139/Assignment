@@ -4,7 +4,7 @@ import "../../fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default ({ movie }) => {
-    //const release_date = movie.release_date.split("-");
+
     return (
         <Fragment>
             <div className={"text-light"}>
@@ -20,15 +20,7 @@ export default ({ movie }) => {
             <h4>
                 <span>Language: {movie.original_language}</span>
             </h4>
-            <h4>
-                <span>Popularity: {movie.popularity}</span>
-            </h4>
-                <h4>
-                    <span>Vote Average: {movie.vote_average}</span>
-                </h4>
-                <h4>
-                    <span>Vote Count: {movie.vote_count}</span>
-                </h4>
+
                 </div>
         </Fragment>
     );
