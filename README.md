@@ -10,7 +10,7 @@ The main page also allows the user to search by name and also filter by LANGUAGE
 
 The user can also edit the name or overview information on the film and also use the delete movie function from the main page. Users can login initially or they will be redirected to the login page when they click on the movie image to view the full movie page.
 
-. . . . . List of user features  . . . .
+## Features.
 
 - Display all movies served up from the API 
 - Display number of movies served up
@@ -51,7 +51,7 @@ StoryBook
 
 This is the data that is served up from the API
 
-results: [
+`results: [
 {
 popularity: 350.554,
 vote_count: 390,
@@ -71,7 +71,7 @@ title: "The Old Man & the Gun",
 vote_average: 6.4,
 overview: "The true story of Forrest Tucker, from his audacious escape from San Quentin at the age of 70 to an unprecedented string of heists that confounded authorities and enchanted the public. Wrapped up in the pursuit are a detective, who becomes captivated with Forrest’s commitment to his craft, and a woman, fullmazahd.in who loves him in spite of his chosen profession.",
 release_date: "2018-09-28"
-},
+},`
 
 ## UI Design.
 
