@@ -51,7 +51,7 @@ StoryBook
 
 This is the data that is served up from the API
 
-<code>
+...
   results: [
 {
 popularity: 350.554,
@@ -73,7 +73,7 @@ vote_average: 6.4,
 overview: "The true story of Forrest Tucker, from his audacious escape from San Quentin at the age of 70 to an unprecedented string of heists that confounded authorities and enchanted the public. Wrapped up in the pursuit are a detective, who becomes captivated with Forrest’s commitment to his craft, and a woman, fullmazahd.in who loves him in spite of his chosen profession.",
 release_date: "2018-09-28"
 },
-</code>
+...
 
 ## UI Design.
 
