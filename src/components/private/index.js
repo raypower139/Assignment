@@ -2,6 +2,7 @@ import React from "react";
 import "./moviePrivate.css";
 import "../../fontawesome";
 
+
 export default ({ movie }) => {
     return (
         <div className="rowPrivate">

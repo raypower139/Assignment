@@ -8,7 +8,7 @@ import App from "./App";
 import MoviePage from "./moviePage";
 import Header from "./components/header/";
 import LoginForm from "./components/authentication/loginForm";
-
+import PrivateRoute from "./components/authentication/privateRoute";
 
 
 class Router extends Component {
@@ -34,7 +34,7 @@ class Router extends Component {
                 }}>
                     <div className="container-fluid">
                         <Switch>
-                            <Route path="/movies/:id" component={MoviePage} />
+                            <PrivateRoute path="/movies/:id" component={MoviePage} />
                             <Route path="/login" component={LoginForm} />  {/* New route */}
                             <Route exact path="/" component={App} />
                             <Redirect from="*" to="/" />
