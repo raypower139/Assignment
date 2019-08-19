@@ -103,7 +103,7 @@ release_date: "2018-09-28"
 
 The API that serves the APP is just a list of popular movies from The Movie Database API from this site https://www.themoviedb.org/
 
-## Authentication (if relevant).
+## Authentication.
 
 Authentication is served by the Mock Auth that we used in the labs. Login details: username: a@b.com  password: test
 
