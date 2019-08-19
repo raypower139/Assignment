@@ -27,7 +27,7 @@ The user can also edit the name or overview information on the film and also use
 ## Setup.
 
 Clone the App
-+ Create a new folder mkdir <foldername>
++ Create a new folder `mkdir <foldername>`
 + Navigate to the new folder cd <foldername>
 + Clone the project https://github.com/raypower139/Assignment
 
