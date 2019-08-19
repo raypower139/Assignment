@@ -36,7 +36,7 @@ class Login extends Component {
                 <div className="col-md-4 offset-3">
                     {Authentication.error === 401 ? <p>Invalid username/password</p> : <p></p>}
                     <form style={{ marginTop: "30px" }}>
-                        <h3>Login</h3>
+                        <img width="100" src="logo.svg"/><h3 className="text-white">Please Login</h3>
 
                         <div className="form-group">
                             <input

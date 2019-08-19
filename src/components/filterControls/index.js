@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./filterControls.css"
+import Header from "../header";
 
 export default class FilterControls extends Component {
     handleChange = (e, type, value) => {
@@ -12,6 +13,7 @@ export default class FilterControls extends Component {
     handleGenreChange = e => {
         this.handleChange(e, "genre", e.target.value);
     };
+
 
 
     render() {
@@ -34,6 +36,7 @@ export default class FilterControls extends Component {
                                 <option value="in">Indian</option>
 
                             </select>
+
                         </h4>
                     </div>
                 </div>

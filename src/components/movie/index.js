@@ -81,7 +81,7 @@ class Movie extends Component {
                     />
                     </Link>
                     <div className="card-body">
-                        <h5 className="card-title ">
+                        <div className="card-title ">
                         {this.state.status === "edit" ? (
                             <Fragment>
                                 <div className="card-title">
@@ -113,7 +113,7 @@ class Movie extends Component {
                                 </p>
 
                             </Fragment>
-                        )}</h5>
+                        )}</div>
                     </div>
 
 

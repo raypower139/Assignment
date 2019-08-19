@@ -9,7 +9,7 @@ import MoviePage from "./moviePage";
 import Header from "./components/header/";
 import LoginForm from "./components/authentication/loginForm";
 import PrivateRoute from "./components/authentication/privateRoute";
-
+import FilterControls from "./components/filterControls/";
 
 class Router extends Component {
     componentDidMount() {
