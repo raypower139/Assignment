@@ -77,7 +77,6 @@ release_date: "2018-09-28"
 
 . . . . . Screenshots of app's views with brief statements of their use (see examples below) . . . . . . .
 
-<img src="MainPage.jpg">
 ![main]
 
 >> Shows a card for each movie that is served up from the Movie Database API. The Movie list can be filtered by name and language. A movies title and overview can be edited or the user can also delete the movie. 
