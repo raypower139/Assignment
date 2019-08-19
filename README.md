@@ -77,15 +77,16 @@ release_date: "2018-09-28"
 
 . . . . . Screenshots of app's views with brief statements of their use (see examples below) . . . . . . .
 
-![main][Main Page]
+<img src="MainPage.jpg">
+![main]
 
 >> Shows a card for each movie that is served up from the Movie Database API. The Movie list can be filtered by name and language. A movies title and overview can be edited or the user can also delete the movie. 
 
-![movie][Movie Page]
+![movie]
 
 >> This displays the main movie page for each movie. This page is protected and only accessed while the user is logged in. It displays the movie poster, title, id number, overview, release date and language. It also has a button which will show additional information when selected. 
 
-![login][Login Page]
+![login]
 
 >> This displays the form for the user to enter his username and password to access the protected area's of the site.
 
@@ -97,7 +98,7 @@ release_date: "2018-09-28"
 
 ## Storybook.
 
-![stories][stories]
+![stories]
 
 ## Backend.
 
@@ -107,7 +108,7 @@ The API that serves the APP is just a list of popular movies from The Movie Data
 
 Authentication is served by the Mock Auth that we used in the labs. Login details: username: a@b.com  password: test
 
-[login]: ./Login.jpg
-[main]: ./MainPage.jpg
-[movie]: ./MoviePage.jpg
-[stories]: ./StoryBook.jpg
+[login]: Login.jpg
+[main]: MainPage.jpg
+[movie]: MoviePage.jpg
+[stories]: StoryBook.jpg
