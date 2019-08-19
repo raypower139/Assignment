@@ -6,6 +6,8 @@ import api from "./dataStore/stubAPI"; // NEW
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import MoviePage from "./moviePage";
+import Header from "./components/header/";
+import LoginForm from "./components/authentication/loginForm";
 
 
 
@@ -33,6 +35,7 @@ class Router extends Component {
                     <div className="container-fluid">
                         <Switch>
                             <Route path="/movies/:id" component={MoviePage} />
+                            <Route path="/login" component={LoginForm} />  {/* New route */}
                             <Route exact path="/" component={App} />
                             <Redirect from="*" to="/" />
                         </Switch>

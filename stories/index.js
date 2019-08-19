@@ -7,6 +7,9 @@ import Movie from '../src/components/movie/'
 import MovieList from '../src/components/movieList/'
 import { action } from '@storybook/addon-actions';
 import { MemoryRouter, Route } from "react-router";
+import LoginForm from "../src/components/authentication/loginForm";
+
+
 
 
 storiesOf("Movie List App/Header", module)
@@ -62,4 +65,16 @@ storiesOf("Movie List App/Movie Page/MoviePrivate", module)
         <MoviePrivateDetails user={sample}/>
     ));
 
+storiesOf("Movie List App/Header", module)
+    .addDecorator(story => (
+        <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+    ))
+    .add("default", () => <Header />);
 
+storiesOf("Movie List App/Login Form", module)
+    .addDecorator(story => (
+        <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+    ))
+    .add("default", () => (
+        <LoginForm />
+    ));

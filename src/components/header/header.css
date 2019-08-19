@@ -1,12 +1,23 @@
 font {
     font-weight: bold;
-    font-size: x-large;
+    font-size: large;
 }
 
 .header{
     background-color: #000;
     display: block;
     color: #fff;
-    font-size: 100px;
-    padding-top: -60px
+    font-size: 60px;
+    padding-top: -10px
+}
+
+login{
+    font-size: 40px;
+    padding-top: -10px;
+    padding-left: 200px
+}
+
+.text-white{
+    color: #fff;
+    font-size: 50px;
 }
