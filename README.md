@@ -28,24 +28,24 @@ The user can also edit the name or overview information on the film and also use
 
 Clone the App
 + Create a new folder `mkdir <foldername>`
-+ Navigate to the new folder cd <foldername>
-+ Clone the project https://github.com/raypower139/Assignment
++ Navigate to the new folder `cd <foldername>`
++ Clone the project `https://github.com/raypower139/Assignment`
 
 Run the Auth Server
-+ Clone the project https://github.com/alex-c/mock-auth-backend
++ Clone the project `https://github.com/alex-c/mock-auth-backend`
 + Navigate to the folder
-+ Install dependencies npm install
-+ Run the mock sever node index.js
-+ The server should now be running on port 8005
++ Install dependencies `npm install`
++ Run the mock sever `node index.js`
++ The server should now be running on `port 8005`
 
 Run the App
 + Open the App Folder
-+ install dependencies npm install
-+ Start the App using npm start
-+ The App should now be running on localhost:3000
++ install dependencies `npm install`
++ Start the App using `npm start`
++ The App should now be running on `localhost:3000`
 
 StoryBook
-+ To run  story book : npx start-storybook -p 9001 -c .storybook/
++ To run  story book : `npx start-storybook -p 9001 -c .storybook/`
 
 ## Data Model Design.
 
@@ -101,11 +101,11 @@ release_date: "2018-09-28"
 
 ## Backend.
 
-The API that serves the APP is just a list of popular movies from The Movie Database API from this site https://www.themoviedb.org/
+The API that serves the APP is just a list of popular movies from The Movie Database API from this site `https://www.themoviedb.org/`
 
 ## Authentication.
 
-Authentication is served by the Mock Auth that we used in the labs. Login details: username: a@b.com  password: test
+Authentication is served by the Mock Auth that we used in the labs. Login details: `username: a@b.com`  `password: test`
 
 [login]: Login.jpg
 [main]: MainPage.jpg
